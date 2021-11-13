@@ -4,8 +4,11 @@
     <h2>{{calorie_count}}</h2>
     <input v-model.number="calorie_sub">
     <h1></h1>
-    
     <button type="button" class="btn btn-primary" v-on:click=result()>Subtract Calories</button>
+    <h1></h1>
+    <input v-model.number="calorie_add">
+    <h1></h1>
+    <button type="button" class="btn btn-primary" v-on:click=add()>Add Calories</button>
   </div>
 </template>
 
@@ -31,6 +34,7 @@ export default {
     return{
       calorie_count: 3000,
       calorie_sub : 0,
+      calorie_add: 0,
       //num: 0,
       result: function () {
    this.calorie_count = parseInt(this.calorie_count) - parseInt(this.calorie_sub);
@@ -38,9 +42,15 @@ export default {
      this.calorie_count = 0;
    }
     },
+    add: function(){
+      this.calorie_count = parseInt(this.calorie_count) + parseInt(this.calorie_add);
+    },
     set_sub: function(num) {
       this.calorie_sub = parseInt(num);
-    }
+    },
+    types: [
+          'search',
+        ]
     }
 
   }
