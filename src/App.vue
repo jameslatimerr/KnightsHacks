@@ -1,26 +1,12 @@
 <template>
   <div id="app">
-    <h1> Calorie Tracker </h1>
-    <p> This is an application to calculate your caloric consumption </p>
-      
-    <button type="button" class="btn btn-primary">Input Caloric Intake</button>
+    <div id="nav">
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      types: [
-        'search'
-      ]
-    }
-  }
-}
-</script>
-
-
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +14,14 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-#in{
-  text-align: center;
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>

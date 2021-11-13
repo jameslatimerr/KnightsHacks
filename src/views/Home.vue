@@ -1,14 +1,16 @@
 <template>
   <div class="home">
-    <button type="button" class="btn btn-primary" v-on:click=result()>Subtract Calories</button>
+    <h1>Calorie Calculator</h1>
     <h2>{{calorie_count}}</h2>
     <input v-model.number="calorie_sub">
+    <h1></h1>
+    
+    <button type="button" class="btn btn-primary" v-on:click=result()>Subtract Calories</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import Vue from 'vue'
 /*
 Vue.component('calorie_subtracter', {
@@ -25,9 +27,6 @@ Vue.component('calorie_subtracter', {
 */
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  },
   data(){
     return{
       calorie_count: 3000,
