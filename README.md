@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # kh
 
 ## Project setup
@@ -17,3 +18,8 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# KH2021
+Knights Hacks 2021 Application
+>>>>>>> origin/main
+# KnightsHacks
