@@ -7,7 +7,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-
+Vue.config.devtools = true
 Vue.config.productionTip = false
 
 new Vue({
