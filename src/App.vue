@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
+      <h1>Calorie Calculator</h1>
+      <p> This is an application to calculate your caloric consumption </p>
     </div>
     <router-view/>
   </div>
