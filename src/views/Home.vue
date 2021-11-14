@@ -2,12 +2,12 @@
   <div class="home">
     <h1>{{calorie_count}}</h1>
     <form>
-      <label for = "subcalories">Subtract:</label>
-      <input v-model.number = "calorie_sub" type = "number" min = "0" oninput="validity.valid||(value='');">
+      <label for = "subcalories">Subtract: &nbsp;</label>
+      <input v-model.number = "calorie_sub" type = "number"  min = "0" oninput="validity.valid||(value='');"> &nbsp;
       <button type= "button" class= "btn btn-primary" @click=result()>Subtract Calories</button>
       <br><br>
-      <label for = "addcalories">Add:</label>
-      <input v-model.number = "calorie_add" type = "number" min = "0" oninput="validity.valid||(value='');">
+      <label for = "addcalories">Add: &nbsp;</label>
+      <input v-model.number = "calorie_add" type = "number" min = "0" oninput="validity.valid||(value='');"> &nbsp;
       <button type= "button" class= "btn btn-primary" @click=add()>Add Calories</button>
     </form>
   </div>
@@ -26,18 +26,16 @@ export default {
       calorie_add: 0,
       //num: 0,
       result: function () {
-      
-          this.calorie_count = parseInt(this.calorie_count) - parseInt(this.calorie_sub);
-          if(this.calorie_count < 0){
-            this.calorie_count = 0;
+        if(this.calorie_sub = ' '){
+            this.calorie_sub = 0;
         }
+          this.calorie_count = parseInt(this.calorie_count) - parseInt(this.calorie_sub);
       },
       add: function(){
-
+        if(this.calorie_add = ' '){
+            this.calorie_add = 0;
+        }
         this.calorie_count = parseInt(this.calorie_count) + parseInt(this.calorie_add);
-          if(this.calorie_count < 0){
-            this.calorie_count = 0;
-          }
       },
       set_sub: function(num) {
         this.calorie_sub = parseInt(num);
@@ -46,4 +44,3 @@ export default {
   }
 }
 </script>
-
