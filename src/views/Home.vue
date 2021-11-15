@@ -26,13 +26,13 @@ export default {
       calorie_add: 0,
       //num: 0,
       result: function () {
-        if(this.calorie_sub = ' '){
+        if(!Number.isInteger(this.calorie_sub)){
             this.calorie_sub = 0;
         }
           this.calorie_count = parseInt(this.calorie_count) - parseInt(this.calorie_sub);
       },
       add: function(){
-        if(this.calorie_add = ' '){
+        if(!Number.isInteger(this.calorie_add)){
             this.calorie_add = 0;
         }
         this.calorie_count = parseInt(this.calorie_count) + parseInt(this.calorie_add);
@@ -44,3 +44,4 @@ export default {
   }
 }
 </script>
+
